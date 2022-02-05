@@ -8,49 +8,12 @@
  * @format
  */
 
-import React, {useState} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-  TouchableOpacity,
-} from 'react-native';
+import React from 'react';
+import {StyleSheet} from 'react-native';
+import WeightScanPage from './pages/weigthScan';
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? '#c4c4c4' : 'e3e3e3',
-  };
-
-  const [weight, setWeight] = useState(0);
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <View
-          style={{
-            backgroundColor: isDarkMode ? '#c4c4c4' : 'e3e3e3',
-          }}>
-          <Text>Insert your weight</Text>
-          <Text>Val: {weight}</Text>
-        </View>
-        <TouchableOpacity
-          onPress={() => {
-            // save weight
-          }}>
-          <Text>Submit</Text>
-        </TouchableOpacity>
-      </ScrollView>
-    </SafeAreaView>
-  );
+  return <WeightScanPage />;
 };
 
 const styles = StyleSheet.create({
