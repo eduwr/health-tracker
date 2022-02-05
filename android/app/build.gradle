@@ -13,12 +13,12 @@ import com.android.build.OutputFile
  *
  * project.ext.react = [
  *   // the name of the generated asset file containing your JS bundle
- *   bundleAssetName: "index.android.bundle",
+ *   bundleAssetName: "index.tsx.android.bundle",
  *
  *   // the entry file for bundle generation. If none specified and
- *   // "index.android.js" exists, it will be used. Otherwise "index.js" is
+ *   // "index.tsx.android.js" exists, it will be used. Otherwise "index.tsx.js" is
  *   // default. Can be overridden with ENTRY_FILE environment variable.
- *   entryFile: "index.android.js",
+ *   entryFile: "index.tsx.android.js",
  *
  *   // https://reactnative.dev/docs/performance#enable-the-ram-format
  *   bundleCommand: "ram-bundle",

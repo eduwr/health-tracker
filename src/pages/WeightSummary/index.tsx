@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -10,14 +10,14 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-const WeightScanPage = () => {
+export const WeightSummary = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? '#c4c4c4' : 'e3e3e3',
   };
 
-  const [weight, setWeight] = useState(0);
+  const weight = 0;
 
   return (
     <SafeAreaView style={backgroundStyle}>
@@ -61,5 +61,3 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
 });
-
-export default WeightScanPage;
