@@ -9,10 +9,12 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import {RootTabNavigationProps} from '../../routes/types';
 
 export const WeightSummary = () => {
   const isDarkMode = useColorScheme() === 'dark';
-
+  const navigation = useNavigation<RootTabNavigationProps<'WeightSummary'>>();
   const backgroundStyle = {
     backgroundColor: isDarkMode ? '#c4c4c4' : 'e3e3e3',
   };
@@ -39,6 +41,12 @@ export const WeightSummary = () => {
           <Text>Submit</Text>
         </TouchableOpacity>
       </ScrollView>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('WeightNew');
+        }}>
+        <Text>+</Text>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };
