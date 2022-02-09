@@ -20,7 +20,7 @@ const Tabs = () => (
 );
 
 export const Router = () => (
-  <RootStack.Navigator>
+  <RootStack.Navigator screenOptions={{headerShown: false}}>
     <RootStack.Screen name="Main" component={Tabs} />
     <RootStack.Group screenOptions={{presentation: 'modal'}}>
       <Tab.Screen name="WeightNew" component={WeightNew} />
