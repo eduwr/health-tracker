@@ -7,17 +7,19 @@
  *
  * @format
  */
-
+import 'react-native-gesture-handler';
 import React from 'react';
-
+import {NativeBaseProvider} from 'native-base';
 import {NavigationContainer} from '@react-navigation/native';
 import {Router} from './routes';
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Router />
-    </NavigationContainer>
+    <NativeBaseProvider>
+      <NavigationContainer>
+        <Router />
+      </NavigationContainer>
+    </NativeBaseProvider>
   );
 };
 
